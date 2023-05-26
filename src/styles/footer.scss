@@ -1,0 +1,61 @@
+.footer {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  &__top {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    &-title {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+    &-links {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+    &-link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.48);
+      cursor: pointer;
+      &:hover {
+        color: white;
+      }
+    }
+    &-btns {
+      display: flex;
+      column-gap: 10px;
+    }
+    &-btn {
+      background: #1F1B2E;
+      border: 1px solid #1F1B2E;
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+      &:hover {
+        background: #2e2548;
+      }
+    }
+  }
+  &__desc {
+    color: hsla(0,0%,100%,.48);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 50px;
+  }
+}

@@ -1,0 +1,62 @@
+.card {
+  position: relative;
+  &__img{
+    width: 153px;
+    height: 235px;
+    border-radius: 10px;
+    &:hover {
+      transform: translateY(4px);
+    }
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  &__desc{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #EA003D;
+  }
+  &__hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    padding: 10px;
+    flex-direction: column;
+    row-gap: 20px;
+    transform: translate(-50%, -57%);
+    width: 103%;
+    height: 90%;
+    transition: .3s;
+    background: black;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 10px;
+    &-rating {
+      font-weight: 700;
+      font-size: 35px;
+      color: red;
+    }
+    &-year {
+      font-weight: 800;
+      font-size: 40px;
+      color: white;
+    }
+    &-genres {
+      font-weight: 400;
+      font-size: 20px;
+      color: gold;
+    }
+    &-country {
+      margin-top: 20px;
+      color: aqua;
+    }
+  }
+  &:hover .card__hover {
+    transition: .3s;
+    display: block;
+  }
+}

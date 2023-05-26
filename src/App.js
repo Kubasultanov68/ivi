@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import {Route, Routes} from "react-router-dom";
+import Layout from "./Layout/Layout";
+import Home from "./pages/Home/Home";
+import Movies from "./pages/Movies/Movies";
+import Series from "./pages/Series/Series";
+import Cartoons from "./pages/Cartoons/Cartoons";
+import Register from "./pages/Register/Register";
+import OneMedia from "./pages/OneMedia/OneMedia";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path={''} element={<Layout/>}>
+          <Route path={''} element={<Home/>}/>
+          <Route path={'/movies'} element={<Movies/>}/>
+          <Route path={'/series'} element={<Series/>}/>
+          <Route path={'/cartoons'} element={<Cartoons/>}/>
+          <Route path={'/movies/:id'} element={<OneMedia/>}/>
+        </Route>
+        <Route path={'/register'} element={<Register/>}/>
+      </Routes>
+    </>
   );
 }
 
