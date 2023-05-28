@@ -10,7 +10,7 @@
     flex-direction: column;
     row-gap: 30px;
     width: 70%;
-    img {
+    iframe {
       width: 100%;
     }
     &-title {
@@ -38,10 +38,47 @@
       text-align: center;
       color: rgba(255, 255, 255, 0.72);
     }
+    &-genres {
+      display: flex;
+      justify-content: center;
+      column-gap: 10px;
+    }
+    &-genre {
+      padding: 5px;
+      border: 3px solid #EA003D;
+    }
     &-lang {
       display: flex;
       justify-content: center;
       column-gap: 20px;
+    }
+    &-persons {
+      &_row {
+        display: flex;
+        align-items: start;
+        column-gap: 10px;
+        text-align: center;
+      }
+      margin-bottom: 30px;
+    }
+    &-person {
+      width: calc(20% - 8px);
+      div {
+        width: 56px;
+        height: 56px;
+        padding: 5px 3px 3px 3px;
+        background: gray;
+        border-radius: 5px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        p {
+          font-size: 13px;
+          line-height: 16px;
+          font-weight: 400;
+        }
+      }
     }
     &-hd {
       padding: 2px 7px;
@@ -60,6 +97,29 @@
       font-size: 14px;
       line-height: 22px;
       color: rgba(255, 255, 255, 0.72);
+    }
+    &-rating {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 10px;
+      &_left {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 500;
+      }
+      &_rate {
+        font-size: 24px;
+        font-weight: 700;
+        background-color: #73a32f;
+        padding: 20px;
+        border-radius: 12px;
+      }
     }
   }
 }
