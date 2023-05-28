@@ -98,6 +98,10 @@
     gap: 40px;
     &-item {
       width: calc(33.33333% - (80px / 3));
+      color: gray;
+      &:hover {
+        color: #EA003D;
+      }
     }
   }
 }

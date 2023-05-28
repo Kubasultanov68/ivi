@@ -45,7 +45,8 @@ const HeaderSearch = ({open, setOpen}) => {
                                     }}
                                     to={`/movies/${item.id}`} className="headersearch__menu-item">
                                     {item.name}
-                                    <p>{item.year}</p>
+                                    <br/>
+                                    {item.year}
                                 </Link>
                             )) : ''
                     }
